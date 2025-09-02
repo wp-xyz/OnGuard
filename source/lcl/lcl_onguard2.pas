@@ -42,8 +42,8 @@ interface
 
 uses
   {$IFDEF Win16} WinTypes, WinProcs, {$ENDIF}
-  {$IFDEF Win32} Windows, ComCtrls, {$ENDIF}
-  {$IFDEF Win64} Windows, ComCtrls, {$ENDIF}                       {AH.02}
+  {$IFDEF Win32} Windows, {ComCtrls,} {$ENDIF}
+  {$IFDEF Win64} Windows, {ComCtrls,} {$ENDIF}                       {AH.02}
   SysUtils, Classes,
   Graphics, Controls, Forms, Dialogs, MaskEdit,
   ExtCtrls, StdCtrls, Buttons, ComCtrls, Messages,

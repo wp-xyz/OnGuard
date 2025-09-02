@@ -314,8 +314,10 @@ var
 implementation
 
 {$IFDEF MSWINDOWS}
-uses
-  {$IFDEF DELPHI}{$IFDEF DELPHI3UP} ActiveX; {$ELSE} OLE2; {$ENDIF}{$ENDIF}
+{$IFDEF DELPHI}
+  uses
+  {$IFDEF DELPHI}{$IFDEF DELPHI3UP} ActiveX; {$ELSE} OLE2; {$ENDIF}
+{$ENDIF}
 {$ENDIF}
 
 {first 2048 bits of Pi in hexadecimal, low to high, without the leading "3"}
